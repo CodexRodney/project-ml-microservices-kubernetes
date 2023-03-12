@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/CodexRodney/project-ml-microservices-kubernetes/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/CodexRodney/project-ml-microservices-kubernetes/tree/master)
 
 ## Project Overview
 
@@ -10,11 +10,25 @@ You are given a pre-trained, `sklearn` model that has been trained to predict ho
 
 Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
 * Test your project code using linting
+__run make lint__
 * Complete a Dockerfile to containerize this application
+__run ./run_docker.sh__
+#### Note:
+        if you haven't configured your user to have root priviledges you might be 
+        required to append sudo before the docker commands
 * Deploy your containerized application using Docker and make a prediction
+__run ./make_prediction.sh__
+the command should be runned in a separate terminal from the terminal runnng the docker app
+this should be after running ./run_docker.sh
+
 * Improve the log statements in the source code for this application
 * Configure Kubernetes and create a Kubernetes cluster
+Ensure to have a minikube
+then __run minikube start__ : this will take a while
+after it has verify it was well configured by using the following command
+__run kubectl config view__ : you should get an output
 * Deploy a container using Kubernetes and make a prediction
+__run ./kubernetes.sh__
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
 You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
