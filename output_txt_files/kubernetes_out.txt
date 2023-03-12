@@ -1,1 +1,14 @@
-<paste log output from Kubernetes-mediated prediction, here>
+(.devops) rodney@rodney:~/project-ml-microservice-kubernetes$ ./run_kubernetes.sh 
+Error from server (AlreadyExists): pods "machine-learning" already exists
+NAME                                READY   STATUS    RESTARTS   AGE
+machine-learning-5c7c5fcd7c-m4n9x   1/1     Running   0          17m
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+
+rodney@rodney:~/project-ml-microservice-kubernetes$ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
