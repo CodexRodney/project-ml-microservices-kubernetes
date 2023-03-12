@@ -41,6 +41,7 @@ jobs:
       - run:
           name: run lint
           command: |
+            source ~/.devops/bin/activate
             make lint 
 workflows:
   version: 2.1
